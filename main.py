@@ -1,11 +1,12 @@
 #/usr/bin/env python2.7
 # -*- coding: utf-8 -*-
 import random
+import string
 
 def genPassword():
-	lettre = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-	LETTRE = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-	chiffre = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+	lettre = list(string.ascii_lowercase)
+	LETTRE = list(string.ascii_uppercase)
+	chiffre = list(string.digits)
 	mdpFinal = ""
 	while(len(mdpFinal) < 9):
 		hasard = random.randint(1, 3)
